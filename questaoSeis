@@ -1,0 +1,15 @@
+main
+    add v0, zr, 0x40   
+    add v1, zr, 0x60   
+
+loop
+    bge v0, v1, end_loop
+    ldw v2, v0, 0      
+    ldw v3, v1, 0
+    stw v3, v0, 0     
+    stw v2, v1, 0     
+    add v0, v0, 1      
+    sub v1, v1, 1      
+    beq zr, zr, loop
+end
+    hlt   
