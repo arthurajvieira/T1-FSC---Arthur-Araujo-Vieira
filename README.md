@@ -46,3 +46,6 @@ Este desafio consiste em imprimir meu nome completo no terminal. A sua operaçã
 
 <img width="886" height="666" alt="image" src="https://github.com/user-attachments/assets/c67c20c5-5f62-4dd4-a639-8dc6e0343885" />
 
+
+# Nota)
+Este texto teve **erros de português corrigidos com a ajuda de IA (Gemini)**, que fez apenas correções ortográficas e gramaticais sem gerar texto.
