@@ -1,0 +1,19 @@
+main
+	add v0,zr,0x60
+	add v1,zr,0x90
+	add v2,zr,10
+	add v3,zr,20
+	add v4,zr,0
+loop
+	beq v4,v3,end
+	add v4,v4,1
+	sub v3,v3,2
+	add v5,v3,0
+	add v6,v4,0
+	add v5,v6
+	beq v5,v2,match
+	beq zr,zr,loop
+match
+	stw v5,zr,0x90
+end
+	hlt
