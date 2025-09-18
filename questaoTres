@@ -1,0 +1,30 @@
+main
+    add a0, zr, 10
+    stw a0, zr, 0x52  
+
+    add a0, zr, 8
+    stw a0, zr, 0x53  
+
+    add a0, zr, 12
+    stw a0, zr, 0x56  
+
+    add a0, zr, 5     
+    stw a0, zr, 0x5A  
+
+    add v0, zr, 0x50     
+    add v1, zr, 0x80     
+    ldw v2, v0, 0        
+                         
+loop
+    bge v0, v1, end 
+    ldw v3, v0, 0        
+    bge v2, v3, prox
+    add v2, v3, 0        
+
+prox
+    add v0, v0, 1        
+    beq zr, zr, loop 
+
+end
+    stw v2, zr, 0x90     
+    hlt  
