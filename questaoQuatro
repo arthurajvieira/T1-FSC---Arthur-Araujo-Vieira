@@ -1,0 +1,15 @@
+main
+    add v0, zr, 0x40     
+    add v1, zr, 0x90     
+    add v2, zr, 64       
+loop
+    ldw v3, v0, 0        
+    and v4, v3, 1       
+    bne v4, zr, eh_impar 
+    add v3, v3, 1        
+eh_impar
+    stw v3,v1, 0        
+    sub v2, v2, 1        
+    bne v2, zr, loop
+end
+    hlt
