@@ -6,6 +6,7 @@ Abri meu loop com um bge para que encerrasse o loop quando v0 fosse maior ou igu
 	Como fiz 20 numeros teste, a quantidade de impares são 10, e podemos visualizar isso na memoria
  
 <img width="886" height="659" alt="image" src="https://github.com/user-attachments/assets/6d361454-239b-49a3-8d31-c40a48831a8d" />
+
 #
 # QUESTAO 2)
 Para a implementação deste desafio, utilizei o código de exemplo para o cálculo da sequência de Fibonacci, disponibilizado nas instruções do GitHub, foi utilizado como base. A principal modificação realizada consistiu em ajustar o endereço de memória para o armazenamento do resultado. No código original, a instrução stw salvava o valor em outro local, fx600. Alterei essa instrução para que o resultado de cada termo da sequência calculado fosse direcionado para o endereço de memória 0x30, garantindo que o valor final fosse gravado na posição correta, de acordo com o solicitado.
