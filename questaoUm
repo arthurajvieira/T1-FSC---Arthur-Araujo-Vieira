@@ -1,0 +1,20 @@
+main
+	add v0,zr,0
+	add v1,zr,20
+	add v2,zr,0	
+	add v3,zr,0
+	
+loop
+	bge v0,v1,end
+	and v4,v0,1
+	beq v4,zr,par
+	add v3,v3,1
+	beq zr,zr,prox
+par
+	add v2,v2,1
+prox 
+	add v0,v0,1
+	beq zr,zr,loop
+end
+	stw v3,zr,0x20
+	hlt
